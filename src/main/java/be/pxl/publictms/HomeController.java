@@ -39,7 +39,7 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "pc",method = RequestMethod.GET)
+	@RequestMapping(value = "test",method = RequestMethod.GET)
         public @ResponseBody String testMethod() {
             return "Succes!";
         }
