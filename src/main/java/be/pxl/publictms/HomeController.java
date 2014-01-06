@@ -38,7 +38,7 @@ public class HomeController {
 		
 		return "home";
 	}
-	
+	//test
 	@RequestMapping(value = "test",method = RequestMethod.GET)
         public @ResponseBody String testMethod() {
             return "Succes!";
