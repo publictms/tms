@@ -5,6 +5,7 @@
 package be.pxl.publictms.DAO;
 
 import be.pxl.publictms.pojo.Gebruiker;
+
 import java.util.List;
 
 /**
@@ -16,5 +17,4 @@ public interface GebruikerDAO {
     public List<Gebruiker> getGebruikers();
     public void deleteGebruiker(int id);
     public void updateGebruiker(Gebruiker gebruiker);
-    
 }

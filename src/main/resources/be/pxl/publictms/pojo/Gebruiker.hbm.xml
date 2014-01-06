@@ -21,7 +21,7 @@
             <key>
                 <column name="gebruikerid" not-null="true" />
             </key>
-            <one-to-many class="be.pxl.publictms.pojo.Bericht" />
+            <one-to-many class="be.pxl.publictms.pojo.Bericht"/>
         </set>
         <set name="berichtsForOntvangerid" inverse="true">
             <key>

@@ -8,7 +8,7 @@
             <column name="werknemerid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="taal" class="be.pxl.publictms.pojo.Taal" fetch="select">
+        <many-to-one name="taal" class="be.pxl.publictms.pojo.Taal" fetch="join">
             <column name="taal" />
         </many-to-one>
         <property name="naam" type="string">

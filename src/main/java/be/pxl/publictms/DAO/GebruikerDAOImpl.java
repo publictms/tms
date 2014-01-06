@@ -33,7 +33,7 @@ public class GebruikerDAOImpl implements GebruikerDAO{
     public List<Gebruiker> getGebruikers() {
         return sessionFactory.getCurrentSession().createQuery("from Gebruiker").list();
     }
-
+    
     @Override
     public void deleteGebruiker(int id) {
         Gebruiker gebruiker = (Gebruiker)sessionFactory.getCurrentSession().load(Gebruiker.class, id);
@@ -46,5 +46,7 @@ public class GebruikerDAOImpl implements GebruikerDAO{
     public void updateGebruiker(Gebruiker gebruiker) {
         sessionFactory.getCurrentSession().update(gebruiker);
     }
+    
+    
     
 }
