@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import be.pxl.publictms.model.Computer;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /**
  * Handles requests for the application home page.
@@ -40,9 +40,13 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "pc",method = RequestMethod.GET)
-	@ResponseBody
-	public Computer testMethod() {
-		return new Computer(0, "HP");
-	}
-	
+        public @ResponseBody String testMethod() {
+            return "Succes!";
+        }
+        
+	@ExceptionHandler(Exception.class)
+        public @ResponseBody String handleUncaughtException(Exception ex){
+            System.out.println(ex.toString());
+            return ex.toString();
+        }
 }

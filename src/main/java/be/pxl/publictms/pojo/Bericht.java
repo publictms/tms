@@ -11,8 +11,8 @@ public class Bericht  implements java.io.Serializable {
 
 
      private int berichtid;
-     private Gebruiker gebruikerByGebruikerid;
-     private Gebruiker gebruikerByOntvangerid;
+     private int gebruikerid;
+     private int ontvangerid;
      private String berichttitel;
      private String bericht;
      private Date datum;
@@ -22,16 +22,16 @@ public class Bericht  implements java.io.Serializable {
     }
 
 	
-    public Bericht(int berichtid, Gebruiker gebruikerByGebruikerid, Gebruiker gebruikerByOntvangerid, String bericht) {
+    public Bericht(int berichtid, int gebruikerid , int ontvangerid, String bericht) {
         this.berichtid = berichtid;
-        this.gebruikerByGebruikerid = gebruikerByGebruikerid;
-        this.gebruikerByOntvangerid = gebruikerByOntvangerid;
+        this.gebruikerid  = gebruikerid ;
+        this.ontvangerid = ontvangerid;
         this.bericht = bericht;
     }
-    public Bericht(int berichtid, Gebruiker gebruikerByGebruikerid, Gebruiker gebruikerByOntvangerid, String berichttitel, String bericht, Date datum, Boolean gelezen) {
+    public Bericht(int berichtid, int gebruikerid , int ontvangerid, String berichttitel, String bericht, Date datum, Boolean gelezen) {
        this.berichtid = berichtid;
-       this.gebruikerByGebruikerid = gebruikerByGebruikerid;
-       this.gebruikerByOntvangerid = gebruikerByOntvangerid;
+       this.gebruikerid  = gebruikerid ;
+       this.ontvangerid = ontvangerid;
        this.berichttitel = berichttitel;
        this.bericht = bericht;
        this.datum = datum;
@@ -45,20 +45,23 @@ public class Bericht  implements java.io.Serializable {
     public void setBerichtid(int berichtid) {
         this.berichtid = berichtid;
     }
-    public Gebruiker getGebruikerByGebruikerid() {
-        return this.gebruikerByGebruikerid;
+
+    public int getGebruikerid() {
+        return gebruikerid;
     }
-    
-    public void setGebruikerByGebruikerid(Gebruiker gebruikerByGebruikerid) {
-        this.gebruikerByGebruikerid = gebruikerByGebruikerid;
+
+    public void setGebruikerid(int gebruikerid) {
+        this.gebruikerid = gebruikerid;
     }
-    public Gebruiker getGebruikerByOntvangerid() {
-        return this.gebruikerByOntvangerid;
+
+    public int getontvangerid() {
+        return ontvangerid;
     }
-    
-    public void setGebruikerByOntvangerid(Gebruiker gebruikerByOntvangerid) {
-        this.gebruikerByOntvangerid = gebruikerByOntvangerid;
+
+    public void setontvangerid(int ontvangerid) {
+        this.ontvangerid = ontvangerid;
     }
+   
     public String getBerichttitel() {
         return this.berichttitel;
     }

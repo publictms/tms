@@ -45,8 +45,5 @@ public class GebruikerDAOImpl implements GebruikerDAO{
     @Override
     public void updateGebruiker(Gebruiker gebruiker) {
         sessionFactory.getCurrentSession().update(gebruiker);
-    }
-    
-    
-    
+    }  
 }

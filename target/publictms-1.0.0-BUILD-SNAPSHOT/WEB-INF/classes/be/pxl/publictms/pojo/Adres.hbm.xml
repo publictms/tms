@@ -8,9 +8,9 @@
             <column name="adresid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="postcode" class="be.pxl.publictms.pojo.Postcode" fetch="select">
+        <property name="postcode" type="string">
             <column name="postcode" length="10" not-null="true" />
-        </many-to-one>
+        </property>
         <property name="straat" type="string">
             <column name="straat" length="50" not-null="true" />
         </property>
@@ -23,17 +23,5 @@
         <property name="land" type="string">
             <column name="land" length="30" not-null="true" />
         </property>
-        <set name="transportadreses" inverse="true">
-            <key>
-                <column name="adresid" not-null="true" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Transportadres" />
-        </set>
-        <set name="facturaties" inverse="true">
-            <key>
-                <column name="adresid" not-null="true" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Facturatie" />
-        </set>
     </class>
 </hibernate-mapping>

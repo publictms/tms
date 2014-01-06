@@ -11,11 +11,5 @@
         <property name="gemeente" type="string">
             <column name="gemeente" length="30" not-null="true" />
         </property>
-        <set name="adreses" inverse="true">
-            <key>
-                <column name="postcode" length="10" not-null="true" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Adres" />
-        </set>
     </class>
 </hibernate-mapping>

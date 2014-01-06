@@ -3,7 +3,6 @@ package be.pxl.publictms.pojo;
 
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -13,7 +12,7 @@ public class Werknemer  implements java.io.Serializable {
 
 
      private int werknemerid;
-     private Taal taal;
+     private int taal;
      private String naam;
      private String voornaam;
      private Boolean actief;
@@ -26,8 +25,6 @@ public class Werknemer  implements java.io.Serializable {
      private String functie;
      private int rijbewijsid;
      private int infoid;
-     private Set<Gebruiker> gebruikers = new HashSet<Gebruiker>(0);
-     private Set<Opdracht> opdrachts = new HashSet<Opdracht>(0);
 
     public Werknemer() {
     }
@@ -44,7 +41,7 @@ public class Werknemer  implements java.io.Serializable {
         this.rijbewijsid = rijbewijsid;
         this.infoid = infoid;
     }
-    public Werknemer(int werknemerid, Taal taal, String naam, String voornaam, Boolean actief, int adresid, int contactid, Character geslacht, String statuut, Date datuminschrijving, Date datumuitschrijving, String functie, int rijbewijsid, int infoid, Set<Gebruiker> gebruikers, Set<Opdracht> opdrachts) {
+    public Werknemer(int werknemerid, int taal, String naam, String voornaam, Boolean actief, int adresid, int contactid, Character geslacht, String statuut, Date datuminschrijving, Date datumuitschrijving, String functie, int rijbewijsid, int infoid, Set<Gebruiker> gebruikers, Set<Opdracht> opdrachts) {
        this.werknemerid = werknemerid;
        this.taal = taal;
        this.naam = naam;
@@ -59,8 +56,6 @@ public class Werknemer  implements java.io.Serializable {
        this.functie = functie;
        this.rijbewijsid = rijbewijsid;
        this.infoid = infoid;
-       this.gebruikers = gebruikers;
-       this.opdrachts = opdrachts;
     }
    
     public int getWerknemerid() {
@@ -70,11 +65,11 @@ public class Werknemer  implements java.io.Serializable {
     public void setWerknemerid(int werknemerid) {
         this.werknemerid = werknemerid;
     }
-    public Taal getTaal() {
+    public int getTaal() {
         return this.taal;
     }
     
-    public void setTaal(Taal taal) {
+    public void setTaal(int taal) {
         this.taal = taal;
     }
     public String getNaam() {
@@ -161,24 +156,6 @@ public class Werknemer  implements java.io.Serializable {
     public void setInfoid(int infoid) {
         this.infoid = infoid;
     }
-    public Set<Gebruiker> getGebruikers() {
-        return this.gebruikers;
-    }
-    
-    public void setGebruikers(Set<Gebruiker> gebruikers) {
-        this.gebruikers = gebruikers;
-    }
-    public Set<Opdracht> getOpdrachts() {
-        return this.opdrachts;
-    }
-    
-    public void setOpdrachts(Set<Opdracht> opdrachts) {
-        this.opdrachts = opdrachts;
-    }
-
-
-
-
 }
 
 

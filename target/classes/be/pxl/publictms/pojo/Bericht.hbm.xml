@@ -8,12 +8,12 @@
             <column name="berichtid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="gebruikerByGebruikerid" class="be.pxl.publictms.pojo.Gebruiker" fetch="select">
-            <column name="gebruikerid" not-null="true" />
-        </many-to-one>
-        <many-to-one name="gebruikerByOntvangerid" class="be.pxl.publictms.pojo.Gebruiker" fetch="select">
-            <column name="ontvangerid" not-null="true" />
-        </many-to-one>
+        <property name="gebruikerid" type="int">
+            <column name="gebruikerid" />
+        </property>
+        <property name="ontvangerid" type="int">
+            <column name="ontvangerid" />
+        </property>
         <property name="berichttitel" type="string">
             <column name="berichttitel" length="50" />
         </property>

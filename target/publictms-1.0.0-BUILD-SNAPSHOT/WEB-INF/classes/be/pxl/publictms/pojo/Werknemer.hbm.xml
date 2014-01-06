@@ -8,9 +8,9 @@
             <column name="werknemerid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="taal" class="be.pxl.publictms.pojo.Taal" fetch="select">
-            <column name="taal" />
-        </many-to-one>
+        <property name="Taal" type="int">
+            <column name="Taal" not-null="true" />
+        </property>
         <property name="naam" type="string">
             <column name="naam" length="30" not-null="true" />
         </property>
@@ -47,17 +47,5 @@
         <property name="infoid" type="int">
             <column name="infoid" not-null="true" />
         </property>
-        <set name="gebruikers" inverse="true">
-            <key>
-                <column name="werknemerid" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Gebruiker" />
-        </set>
-        <set name="opdrachts" inverse="true">
-            <key>
-                <column name="werknemerid" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Opdracht" />
-        </set>
     </class>
 </hibernate-mapping>
