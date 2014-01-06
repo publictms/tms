@@ -17,7 +17,6 @@ public class Gebruiker  implements java.io.Serializable {
      private String paswoord;
      private Set<Bericht> berichtsForGebruikerid = new HashSet<Bericht>(0);
      private Set<Bericht> berichtsForOntvangerid = new HashSet<Bericht>(0);
-
     public Gebruiker() {
     }
 
@@ -78,10 +77,6 @@ public class Gebruiker  implements java.io.Serializable {
     public void setBerichtsForOntvangerid(Set<Bericht> berichtsForOntvangerid) {
         this.berichtsForOntvangerid = berichtsForOntvangerid;
     }
-
-
-
-
 }
 
 

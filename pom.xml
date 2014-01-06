@@ -71,7 +71,6 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-
 		<!-- @Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
@@ -141,6 +140,17 @@
 	        <artifactId>postgresql-9.2-1002.jdbc4</artifactId>
 	        <version>SNAPSHOT</version>
 	    </dependency>
+	 <dependency>
+	  <groupId>org.springframework.batch</groupId>
+	  <artifactId>spring-batch</artifactId>
+	  <version>2.0.4.RELEASE</version>
+	  <type>pom</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-orm</artifactId>
+	  <version>2.5.6</version>
+	 </dependency>
 	</dependencies>
     <build>
         <plugins>
