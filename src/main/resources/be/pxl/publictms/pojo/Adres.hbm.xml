@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-dec-2013 20:16:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="be.pxl.publictms.pojo.Adres" table="adres" schema="public">
+        <id name="adresid" type="int">
+            <column name="adresid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="postcode" class="be.pxl.publictms.pojo.Postcode" fetch="select">
+            <column name="postcode" length="10" not-null="true" />
+        </many-to-one>
+        <property name="straat" type="string">
+            <column name="straat" length="50" not-null="true" />
+        </property>
+        <property name="nummer" type="short">
+            <column name="nummer" precision="4" scale="0" not-null="true" />
+        </property>
+        <property name="bus" type="string">
+            <column name="bus" length="10" />
+        </property>
+        <property name="land" type="string">
+            <column name="land" length="30" not-null="true" />
+        </property>
+        <set name="transportadreses" inverse="true">
+            <key>
+                <column name="adresid" not-null="true" />
+            </key>
+            <one-to-many class="be.pxl.publictms.pojo.Transportadres" />
+        </set>
+        <set name="facturaties" inverse="true">
+            <key>
+                <column name="adresid" not-null="true" />
+            </key>
+            <one-to-many class="be.pxl.publictms.pojo.Facturatie" />
+        </set>
+    </class>
+</hibernate-mapping>

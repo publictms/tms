@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-dec-2013 20:16:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="be.pxl.publictms.pojo.Gebruiker" table="gebruiker" schema="public">
+        <id name="gebruikerid" type="int">
+            <column name="gebruikerid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="werknemer" class="be.pxl.publictms.pojo.Werknemer" fetch="select">
+            <column name="werknemerid" />
+        </many-to-one>
+        <property name="gebruikersnaam" type="string">
+            <column name="gebruikersnaam" length="30" not-null="true" />
+        </property>
+        <property name="paswoord" type="string">
+            <column name="paswoord" length="30" not-null="true" />
+        </property>
+        <set name="berichtsForGebruikerid" inverse="true">
+            <key>
+                <column name="gebruikerid" not-null="true" />
+            </key>
+            <one-to-many class="be.pxl.publictms.pojo.Bericht" />
+        </set>
+        <set name="berichtsForOntvangerid" inverse="true">
+            <key>
+                <column name="ontvangerid" not-null="true" />
+            </key>
+            <one-to-many class="be.pxl.publictms.pojo.Bericht" />
+        </set>
+    </class>
+</hibernate-mapping>

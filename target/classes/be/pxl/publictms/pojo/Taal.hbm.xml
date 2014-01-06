@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-dec-2013 20:16:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="be.pxl.publictms.pojo.Taal" table="taal" schema="public">
+        <id name="taalid" type="int">
+            <column name="taalid" />
+            <generator class="assigned" />
+        </id>
+        <property name="taalnaam" type="string">
+            <column name="taalnaam" length="20" not-null="true" />
+        </property>
+        <set name="transportadreses" inverse="true">
+            <key>
+                <column name="taal" />
+            </key>
+            <one-to-many class="be.pxl.publictms.pojo.Transportadres" />
+        </set>
+        <set name="klants" inverse="true">
+            <key>
+                <column name="taal" not-null="true" />
+            </key>
+            <one-to-many class="be.pxl.publictms.pojo.Klant" />
+        </set>
+        <set name="werknemers" inverse="true">
+            <key>
+                <column name="taal" />
+            </key>
+            <one-to-many class="be.pxl.publictms.pojo.Werknemer" />
+        </set>
+    </class>
+</hibernate-mapping>
