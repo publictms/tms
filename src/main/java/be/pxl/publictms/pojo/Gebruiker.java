@@ -77,6 +77,10 @@ public class Gebruiker  implements java.io.Serializable {
     public void setBerichtsForOntvangerid(Set<Bericht> berichtsForOntvangerid) {
         this.berichtsForOntvangerid = berichtsForOntvangerid;
     }
+    @Override
+    public String toString(){
+        return this.gebruikersnaam + " " + this.paswoord;
+    }
 }
 
 

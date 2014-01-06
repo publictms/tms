@@ -39,7 +39,7 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "pc",method = RequestMethod.GET,produces = "application/json")
+	@RequestMapping(value = "pc",method = RequestMethod.GET)
 	@ResponseBody
 	public Computer testMethod() {
 		return new Computer(0, "HP");

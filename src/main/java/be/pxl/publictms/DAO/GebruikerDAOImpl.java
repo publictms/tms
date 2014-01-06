@@ -6,8 +6,6 @@ package be.pxl.publictms.DAO;
 
 import be.pxl.publictms.pojo.Gebruiker;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
