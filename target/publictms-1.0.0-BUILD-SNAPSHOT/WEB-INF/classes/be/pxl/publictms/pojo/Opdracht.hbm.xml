@@ -8,15 +8,15 @@
             <column name="opdrachtid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="voertuig" class="be.pxl.publictms.pojo.Voertuig" fetch="select">
+        <property name="voertuigid" type="int">
             <column name="voertuigid" />
-        </many-to-one>
-        <many-to-one name="werknemer" class="be.pxl.publictms.pojo.Werknemer" fetch="select">
+        </property>
+        <property name="werknemerid" type="int">
             <column name="werknemerid" />
-        </many-to-one>
-        <many-to-one name="oplegger" class="be.pxl.publictms.pojo.Oplegger" fetch="select">
+        </property>
+        <property name="opleggerid" type="int">
             <column name="opleggerid" />
-        </many-to-one>
+        </property>
         <property name="klantid" type="int">
             <column name="klantid" not-null="true" />
         </property>
@@ -29,11 +29,5 @@
         <property name="vrijveld" type="string">
             <column name="vrijveld" length="300" />
         </property>
-        <set name="acties" inverse="true">
-            <key>
-                <column name="opdrachtid" not-null="true" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Actie" />
-        </set>
     </class>
 </hibernate-mapping>

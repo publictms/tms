@@ -35,7 +35,7 @@
         <property name="burgerstand" type="string">
             <column name="burgerstand" length="20" />
         </property>
-        <property name="aantalkinderen" type="java.lang.Integer">
+        <property name="aantalkinderen" type="int">
             <column name="aantalkinderen" />
         </property>
     </class>
