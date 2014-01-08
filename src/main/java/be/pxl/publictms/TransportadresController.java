@@ -5,10 +5,7 @@
 package be.pxl.publictms;
 
 import be.pxl.publictms.pojo.Transportadres;
-import be.pxl.publictms.pojo.Voertuig;
 import be.pxl.publictms.service.TransportadresService;
-import be.pxl.publictms.service.VoertuigService;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
