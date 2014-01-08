@@ -4,7 +4,6 @@
  */
 package be.pxl.publictms.service;
 
-import be.pxl.publictms.DAO.PostcodeDAO;
 import be.pxl.publictms.DAO.TransportadresDAO;
 import be.pxl.publictms.pojo.Transportadres;
 import org.springframework.beans.factory.annotation.Autowired;

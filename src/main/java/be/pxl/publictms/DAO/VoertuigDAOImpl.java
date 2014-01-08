@@ -5,7 +5,6 @@
 package be.pxl.publictms.DAO;
 
 import be.pxl.publictms.hibernate.HibernateUtil;
-import be.pxl.publictms.pojo.Adres;
 import be.pxl.publictms.pojo.Voertuig;
 import java.util.List;
 import org.hibernate.Query;

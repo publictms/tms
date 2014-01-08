@@ -6,7 +6,6 @@ package be.pxl.publictms.service;
 
 import be.pxl.publictms.DAO.PersoonsinfoDAO;
 import be.pxl.publictms.pojo.Persoonsinfo;
-import be.pxl.publictms.pojo.Taal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

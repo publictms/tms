@@ -5,7 +5,6 @@
 package be.pxl.publictms.service;
 
 import be.pxl.publictms.DAO.VoertuigDAO;
-import be.pxl.publictms.DAO.WerknemerDAO;
 import be.pxl.publictms.pojo.Voertuig;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
