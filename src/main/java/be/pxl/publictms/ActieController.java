@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * @author Stijn
+ * @author Stijntje begijntje
  */
 @Controller
 @RequestMapping("actie")
