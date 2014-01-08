@@ -8,6 +8,7 @@ import be.pxl.publictms.DAO.TaalDAO;
 import be.pxl.publictms.pojo.Taal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -19,22 +20,22 @@ public class TaalServiceImpl implements TaalService{
     @Autowired
     private TaalDAO taalDAO;
     
-    @Override
+    @Transactional
     public void addTaal(Taal taal) {
         taalDAO.addTaal(taal);
     }
 
-    @Override
+    @Transactional
     public Taal getTaal(int id) {
         return taalDAO.getTaal(id);
     }
 
-    @Override
+    @Transactional
     public void deleteTaal(int id) {
         taalDAO.deleteTaal(id);
     }
 
-    @Override
+    @Transactional
     public void updateTaal(Taal taal) {
         taalDAO.updateTaal(taal);
     }

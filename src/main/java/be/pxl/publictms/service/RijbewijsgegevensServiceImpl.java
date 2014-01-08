@@ -8,6 +8,7 @@ import be.pxl.publictms.DAO.RijbewijsgegevensDAO;
 import be.pxl.publictms.pojo.Rijbewijsgegevens;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -19,22 +20,22 @@ public class RijbewijsgegevensServiceImpl implements RijbewijsgegevensService{
     @Autowired
     private RijbewijsgegevensDAO rijbewijsgegevensDAO;
     
-    @Override
+    @Transactional
     public void addRijbewijsgegevens(Rijbewijsgegevens rijbewijsgegevens) {
         rijbewijsgegevensDAO.addRijbewijsgegevens(rijbewijsgegevens);
     }
 
-    @Override
+    @Transactional
     public Rijbewijsgegevens getRijbewijsgegevens(int id) {
         return rijbewijsgegevensDAO.getRijbewijsgegevens(id);
     }
 
-    @Override
+    @Transactional
     public void deleteRijbewijsgegevens(int id) {
         rijbewijsgegevensDAO.deleteRijbewijsgegevens(id);
     }
 
-    @Override
+    @Transactional
     public void updateRijbewijsgegevens(Rijbewijsgegevens rijbewijsgegevens) {
         rijbewijsgegevensDAO.updateRijbewijsgegevens(rijbewijsgegevens);
     }

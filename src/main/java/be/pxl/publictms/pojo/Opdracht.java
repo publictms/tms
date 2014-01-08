@@ -13,14 +13,13 @@ public class Opdracht  implements java.io.Serializable {
 
 
      private int opdrachtid;
-     private Voertuig voertuig;
-     private Werknemer werknemer;
-     private Oplegger oplegger;
+     private int voertuigid;
+     private int werknemerid;
+     private int opleggerid;
      private int klantid;
      private Date datum;
      private Boolean opdrachtklaar;
      private String vrijveld;
-     private Set<Actie> acties = new HashSet<Actie>(0);
 
     public Opdracht() {
     }
@@ -30,16 +29,15 @@ public class Opdracht  implements java.io.Serializable {
         this.opdrachtid = opdrachtid;
         this.klantid = klantid;
     }
-    public Opdracht(int opdrachtid, Voertuig voertuig, Werknemer werknemer, Oplegger oplegger, int klantid, Date datum, Boolean opdrachtklaar, String vrijveld, Set<Actie> acties) {
+    public Opdracht(int opdrachtid, int voertuigid, int werknemerid, int opleggerid, int klantid, Date datum, Boolean opdrachtklaar, String vrijveld) {
        this.opdrachtid = opdrachtid;
-       this.voertuig = voertuig;
-       this.werknemer = werknemer;
-       this.oplegger = oplegger;
+       this.voertuigid = voertuigid;
+       this.werknemerid = werknemerid;
+       this.opleggerid = opleggerid;
        this.klantid = klantid;
        this.datum = datum;
        this.opdrachtklaar = opdrachtklaar;
        this.vrijveld = vrijveld;
-       this.acties = acties;
     }
    
     public int getOpdrachtid() {
@@ -49,26 +47,26 @@ public class Opdracht  implements java.io.Serializable {
     public void setOpdrachtid(int opdrachtid) {
         this.opdrachtid = opdrachtid;
     }
-    public Voertuig getVoertuig() {
-        return this.voertuig;
+    public int getVoertuigid() {
+        return this.voertuigid;
     }
     
-    public void setVoertuig(Voertuig voertuig) {
-        this.voertuig = voertuig;
+    public void setVoertuigid(int voertuigid) {
+        this.voertuigid = voertuigid;
     }
-    public Werknemer getWerknemer() {
-        return this.werknemer;
-    }
-    
-    public void setWerknemer(Werknemer werknemer) {
-        this.werknemer = werknemer;
-    }
-    public Oplegger getOplegger() {
-        return this.oplegger;
+    public int getWerknemerid() {
+        return this.werknemerid;
     }
     
-    public void setOplegger(Oplegger oplegger) {
-        this.oplegger = oplegger;
+    public void setWerknemerid(int werknemerid) {
+        this.werknemerid = werknemerid;
+    }
+    public int getOpleggerid() {
+        return this.opleggerid;
+    }
+    
+    public void setOpleggerid(int opleggerid) {
+        this.opleggerid = opleggerid;
     }
     public int getKlantid() {
         return this.klantid;
@@ -98,17 +96,5 @@ public class Opdracht  implements java.io.Serializable {
     public void setVrijveld(String vrijveld) {
         this.vrijveld = vrijveld;
     }
-    public Set<Actie> getActies() {
-        return this.acties;
-    }
-    
-    public void setActies(Set<Actie> acties) {
-        this.acties = acties;
-    }
-
-
-
 
 }
-
-

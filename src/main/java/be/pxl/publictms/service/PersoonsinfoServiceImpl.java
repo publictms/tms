@@ -9,6 +9,7 @@ import be.pxl.publictms.pojo.Persoonsinfo;
 import be.pxl.publictms.pojo.Taal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -20,22 +21,22 @@ public class PersoonsinfoServiceImpl implements PersoonsinfoService{
     @Autowired
     private PersoonsinfoDAO persoonsinfoDAO;
 
-    @Override
+    @Transactional
     public void addPersoonsinfo(Persoonsinfo persoonsinfo) {
         persoonsinfoDAO.addPersoonsinfo(persoonsinfo);
     }
 
-    @Override
+    @Transactional
     public Persoonsinfo getPersoonsinfo(int id) {
         return persoonsinfoDAO.getPersoonsinfo(id);
     }
 
-    @Override
+    @Transactional
     public void deletePersoonsinfo(int id) {
         persoonsinfoDAO.deletePersoonsinfo(id);
     }
 
-    @Override
+    @Transactional
     public void updatePersoonsinfo(Persoonsinfo persoonsinfo) {
         persoonsinfoDAO.updatePersoonsinfo(persoonsinfo);
     }
