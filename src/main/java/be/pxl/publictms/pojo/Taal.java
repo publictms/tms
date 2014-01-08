@@ -13,24 +13,13 @@ public class Taal  implements java.io.Serializable {
 
      private int taalid;
      private String taalnaam;
-     private Set<Transportadres> transportadreses = new HashSet<Transportadres>(0);
-     private Set<Klant> klants = new HashSet<Klant>(0);
-     private Set<Werknemer> werknemers = new HashSet<Werknemer>(0);
 
     public Taal() {
     }
-
 	
     public Taal(int taalid, String taalnaam) {
         this.taalid = taalid;
         this.taalnaam = taalnaam;
-    }
-    public Taal(int taalid, String taalnaam, Set<Transportadres> transportadreses, Set<Klant> klants, Set<Werknemer> werknemers) {
-       this.taalid = taalid;
-       this.taalnaam = taalnaam;
-       this.transportadreses = transportadreses;
-       this.klants = klants;
-       this.werknemers = werknemers;
     }
    
     public int getTaalid() {
@@ -47,30 +36,6 @@ public class Taal  implements java.io.Serializable {
     public void setTaalnaam(String taalnaam) {
         this.taalnaam = taalnaam;
     }
-    public Set<Transportadres> getTransportadreses() {
-        return this.transportadreses;
-    }
-    
-    public void setTransportadreses(Set<Transportadres> transportadreses) {
-        this.transportadreses = transportadreses;
-    }
-    public Set<Klant> getKlants() {
-        return this.klants;
-    }
-    
-    public void setKlants(Set<Klant> klants) {
-        this.klants = klants;
-    }
-    public Set<Werknemer> getWerknemers() {
-        return this.werknemers;
-    }
-    
-    public void setWerknemers(Set<Werknemer> werknemers) {
-        this.werknemers = werknemers;
-    }
-
-
-
 
 }
 

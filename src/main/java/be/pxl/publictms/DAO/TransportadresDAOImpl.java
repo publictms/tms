@@ -5,9 +5,7 @@
 package be.pxl.publictms.DAO;
 
 import be.pxl.publictms.hibernate.HibernateUtil;
-import be.pxl.publictms.pojo.Adres;
 import be.pxl.publictms.pojo.Transportadres;
-import be.pxl.publictms.pojo.Voertuig;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
