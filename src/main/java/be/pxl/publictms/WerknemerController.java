@@ -10,6 +10,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,8 +37,8 @@ public class WerknemerController {
         werknemerService.addWerknemer(werknemer);
     }
     
-    @RequestMapping(value = "delete", method = RequestMethod.POST)
-    public @ResponseBody void deleteWerknemer(int id){
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    public @ResponseBody void deleteWerknemer(@PathVariable("id") int id){
         if(werknemerService.getWerknemers().contains(werknemerService.getWerknemers().get(id)))
         werknemerService.deleteWerknemer(id);
     }

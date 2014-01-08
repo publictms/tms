@@ -4,7 +4,9 @@
  */
 package be.pxl.publictms;
 
+import be.pxl.publictms.pojo.Transportadres;
 import be.pxl.publictms.pojo.Voertuig;
+import be.pxl.publictms.service.TransportadresService;
 import be.pxl.publictms.service.VoertuigService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,35 +22,30 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Stijn
  */
 @Controller
-@RequestMapping("voertuig")
-public class VoertuigController {
+@RequestMapping("transport")
+public class TransportadresController {
     
     @Autowired
-    private VoertuigService voertuigService;
-    
-    @RequestMapping(value = "get",method = RequestMethod.GET)
-    public @ResponseBody List<Voertuig> getVoertuigen(){
-        return voertuigService.getVoertuigen();
-    }
+    private TransportadresService transportadresService;
     
     @RequestMapping(value = "get/{id}",method = RequestMethod.GET)
-    public @ResponseBody Voertuig getVoertuig(@PathVariable("id") int id){
-        return voertuigService.getVoertuig(id);
+    public @ResponseBody Transportadres getTransportadres(@PathVariable("id") int id){
+        return transportadresService.getTransportadres(id);
     }
     
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    public @ResponseBody void addVoertuig(Voertuig voertuig){
-        voertuigService.addVoertuig(voertuig);
+    public @ResponseBody void addTransportadres(Transportadres transportadres){
+        transportadresService.addTransportadres(transportadres);
     }
     
     @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
-    public @ResponseBody void deleteVoertuig(@PathVariable("id") int id){
-        voertuigService.deleteVoertuig(id);
+    public @ResponseBody void deleteTransportadres(@PathVariable("id") int id){
+        transportadresService.deleteTransportadres(id);
     }
     
     @RequestMapping(value = "update", method = RequestMethod.POST)
-    public @ResponseBody void updateVoertuig(Voertuig voertuig){
-        voertuigService.updateVoertuig(voertuig);
+    public @ResponseBody void updateTransportadres(Transportadres transportadres){
+        transportadresService.updateTransportadres(transportadres);
     }
 
     @ExceptionHandler(Exception.class)
