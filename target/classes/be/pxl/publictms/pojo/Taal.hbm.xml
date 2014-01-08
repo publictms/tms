@@ -11,23 +11,5 @@
         <property name="taalnaam" type="string">
             <column name="taalnaam" length="20" not-null="true" />
         </property>
-        <set name="transportadreses" inverse="true">
-            <key>
-                <column name="taal" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Transportadres" />
-        </set>
-        <set name="klants" inverse="true">
-            <key>
-                <column name="taal" not-null="true" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Klant" />
-        </set>
-        <set name="werknemers" inverse="true">
-            <key>
-                <column name="taal" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Werknemer" />
-        </set>
     </class>
 </hibernate-mapping>
