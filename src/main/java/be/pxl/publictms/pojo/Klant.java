@@ -12,7 +12,7 @@ public class Klant  implements java.io.Serializable {
 
 
      private int klantid;
-     private Taal taal;
+     private int taal;
      private String naam;
      private String voornaam;
      private String bedrijf;
@@ -20,13 +20,12 @@ public class Klant  implements java.io.Serializable {
      private String website;
      private int contactid;
      private Boolean actief;
-     private Set<Facturatie> facturaties = new HashSet<Facturatie>(0);
 
     public Klant() {
     }
 
 	
-    public Klant(int klantid, Taal taal, String naam, String voornaam, String bedrijf, int adresid, int contactid) {
+    public Klant(int klantid, int taal, String naam, String voornaam, String bedrijf, int adresid, int contactid) {
         this.klantid = klantid;
         this.taal = taal;
         this.naam = naam;
@@ -35,7 +34,7 @@ public class Klant  implements java.io.Serializable {
         this.adresid = adresid;
         this.contactid = contactid;
     }
-    public Klant(int klantid, Taal taal, String naam, String voornaam, String bedrijf, int adresid, String website, int contactid, Boolean actief, Set<Facturatie> facturaties) {
+    public Klant(int klantid, int taal, String naam, String voornaam, String bedrijf, int adresid, String website, int contactid, Boolean actief) {
        this.klantid = klantid;
        this.taal = taal;
        this.naam = naam;
@@ -45,7 +44,6 @@ public class Klant  implements java.io.Serializable {
        this.website = website;
        this.contactid = contactid;
        this.actief = actief;
-       this.facturaties = facturaties;
     }
    
     public int getKlantid() {
@@ -55,11 +53,11 @@ public class Klant  implements java.io.Serializable {
     public void setKlantid(int klantid) {
         this.klantid = klantid;
     }
-    public Taal getTaal() {
+    public int getTaal() {
         return this.taal;
     }
     
-    public void setTaal(Taal taal) {
+    public void setTaal(int taal) {
         this.taal = taal;
     }
     public String getNaam() {
@@ -111,17 +109,6 @@ public class Klant  implements java.io.Serializable {
     public void setActief(Boolean actief) {
         this.actief = actief;
     }
-    public Set<Facturatie> getFacturaties() {
-        return this.facturaties;
-    }
-    
-    public void setFacturaties(Set<Facturatie> facturaties) {
-        this.facturaties = facturaties;
-    }
-
-
-
-
 }
 
 
