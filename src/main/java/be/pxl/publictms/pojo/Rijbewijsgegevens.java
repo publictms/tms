@@ -18,7 +18,7 @@ public class Rijbewijsgegevens  implements java.io.Serializable {
      private Boolean medischattest;
      private String tankkaartnr;
      private String tachograafnr;
-     private Integer tachograaftot;
+     private int tachograaftot;
 
     public Rijbewijsgegevens() {
     }
@@ -32,7 +32,7 @@ public class Rijbewijsgegevens  implements java.io.Serializable {
         this.tankkaartnr = tankkaartnr;
         this.tachograafnr = tachograafnr;
     }
-    public Rijbewijsgegevens(int rijbewijsid, String rijbewijsnr, String rijbewijscat, Date geldigtot, Boolean adrcertificaat, Boolean medischattest, String tankkaartnr, String tachograafnr, Integer tachograaftot) {
+    public Rijbewijsgegevens(int rijbewijsid, String rijbewijsnr, String rijbewijscat, Date geldigtot, Boolean adrcertificaat, Boolean medischattest, String tankkaartnr, String tachograafnr, int tachograaftot) {
        this.rijbewijsid = rijbewijsid;
        this.rijbewijsnr = rijbewijsnr;
        this.rijbewijscat = rijbewijscat;
@@ -100,11 +100,11 @@ public class Rijbewijsgegevens  implements java.io.Serializable {
     public void setTachograafnr(String tachograafnr) {
         this.tachograafnr = tachograafnr;
     }
-    public Integer getTachograaftot() {
+    public int getTachograaftot() {
         return this.tachograaftot;
     }
     
-    public void setTachograaftot(Integer tachograaftot) {
+    public void setTachograaftot(int tachograaftot) {
         this.tachograaftot = tachograaftot;
     }
 

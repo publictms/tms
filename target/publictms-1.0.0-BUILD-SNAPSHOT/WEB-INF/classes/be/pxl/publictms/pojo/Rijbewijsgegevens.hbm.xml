@@ -29,7 +29,7 @@
         <property name="tachograafnr" type="string">
             <column name="tachograafnr" length="30" not-null="true" unique="true" />
         </property>
-        <property name="tachograaftot" type="java.lang.Integer">
+        <property name="tachograaftot" type="int">
             <column name="tachograaftot" />
         </property>
     </class>
