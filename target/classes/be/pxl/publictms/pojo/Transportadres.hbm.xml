@@ -8,15 +8,15 @@
             <column name="transportid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="adres" class="be.pxl.publictms.pojo.Adres" fetch="select">
+        <property name="adresid" type="int">
             <column name="adresid" not-null="true" />
-        </many-to-one>
-        <many-to-one name="contact" class="be.pxl.publictms.pojo.Contact" fetch="select">
+        </property>
+        <property name="contactid" type="int">
             <column name="contactid" not-null="true" />
-        </many-to-one>
-        <many-to-one name="taal" class="be.pxl.publictms.pojo.Taal" fetch="select">
+        </property>
+        <property name="taal" type="int">
             <column name="taal" />
-        </many-to-one>
+        </property>
         <property name="naam" type="string">
             <column name="naam" length="30" />
         </property>
@@ -38,11 +38,5 @@
         <property name="vrijveld" type="string">
             <column name="vrijveld" length="300" />
         </property>
-        <set name="acties" inverse="true">
-            <key>
-                <column name="transportid" not-null="true" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Actie" />
-        </set>
     </class>
 </hibernate-mapping>

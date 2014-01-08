@@ -18,16 +18,18 @@ public class Gebruiker implements java.io.Serializable {
      private String gebruikersnaam;
      private String paswoord;
      private int werknemerid;
+     private boolean administrator;
      
     public Gebruiker() {
     }
 
 	
-    public Gebruiker(int gebruikerid, String gebruikersnaam, String paswoord, int werknemerid) {
+    public Gebruiker(int gebruikerid, String gebruikersnaam, String paswoord, int werknemerid, boolean administrator) {
         this.gebruikerid = gebruikerid;
         this.gebruikersnaam = gebruikersnaam;
         this.paswoord = paswoord;
         this.werknemerid = werknemerid;
+        this.administrator = administrator;
     }
    
     public int getGebruikerid() {
@@ -61,6 +63,13 @@ public class Gebruiker implements java.io.Serializable {
         this.werknemerid = werknemerid;
     }
     
+    public boolean getAdministrator() {
+        return administrator;
+    }
+    
+    public void setAdministrator(boolean administrator) {
+        this.administrator = administrator;
+    }
     
     
     @Override

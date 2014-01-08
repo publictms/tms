@@ -17,5 +17,8 @@
         <property name="werknemerid" type="int">
             <column name="werknemerid" not-null="true" />
         </property>
+        <property name="administrator" type="boolean">
+            <column name="administrator" not-null="true" />
+        </property>
     </class>
 </hibernate-mapping>

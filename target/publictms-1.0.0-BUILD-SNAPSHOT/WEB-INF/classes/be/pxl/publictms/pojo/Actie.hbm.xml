@@ -8,12 +8,12 @@
             <column name="actieid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="transportadres" class="be.pxl.publictms.pojo.Transportadres" fetch="select">
+        <property name="transportid" type="int">
             <column name="transportid" not-null="true" />
-        </many-to-one>
-        <many-to-one name="opdracht" class="be.pxl.publictms.pojo.Opdracht" fetch="select">
+        </property>
+        <property name="opdrachtid" type="int">
             <column name="opdrachtid" not-null="true" />
-        </many-to-one>
+        </property>
         <property name="actieklaar" type="java.lang.Boolean">
             <column name="actieklaar" />
         </property>

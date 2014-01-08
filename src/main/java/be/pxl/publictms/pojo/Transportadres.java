@@ -12,9 +12,9 @@ public class Transportadres  implements java.io.Serializable {
 
 
      private int transportid;
-     private Adres adres;
-     private Contact contact;
-     private Taal taal;
+     private int adresid;
+     private int contactid;
+     private int taal;
      private String naam;
      private Boolean actief;
      private String soortadres;
@@ -22,21 +22,20 @@ public class Transportadres  implements java.io.Serializable {
      private String vrachtbeperking;
      private String chauffeursbeperking;
      private String vrijveld;
-     private Set<Actie> acties = new HashSet<Actie>(0);
 
     public Transportadres() {
     }
 
 	
-    public Transportadres(int transportid, Adres adres, Contact contact) {
+    public Transportadres(int transportid, int adresid, int contactid) {
         this.transportid = transportid;
-        this.adres = adres;
-        this.contact = contact;
+        this.adresid = adresid;
+        this.contactid = contactid;
     }
-    public Transportadres(int transportid, Adres adres, Contact contact, Taal taal, String naam, Boolean actief, String soortadres, String vensteruren, String vrachtbeperking, String chauffeursbeperking, String vrijveld, Set<Actie> acties) {
+    public Transportadres(int transportid, int adresid, int contactid, int taal, String naam, Boolean actief, String soortadres, String vensteruren, String vrachtbeperking, String chauffeursbeperking, String vrijveld) {
        this.transportid = transportid;
-       this.adres = adres;
-       this.contact = contact;
+       this.adresid = adresid;
+       this.contactid = contactid;
        this.taal = taal;
        this.naam = naam;
        this.actief = actief;
@@ -45,7 +44,6 @@ public class Transportadres  implements java.io.Serializable {
        this.vrachtbeperking = vrachtbeperking;
        this.chauffeursbeperking = chauffeursbeperking;
        this.vrijveld = vrijveld;
-       this.acties = acties;
     }
    
     public int getTransportid() {
@@ -55,25 +53,25 @@ public class Transportadres  implements java.io.Serializable {
     public void setTransportid(int transportid) {
         this.transportid = transportid;
     }
-    public Adres getAdres() {
-        return this.adres;
+    public int getAdresid() {
+        return this.adresid;
     }
     
-    public void setAdres(Adres adres) {
-        this.adres = adres;
+    public void setAdresid(int adresid) {
+        this.adresid = adresid;
     }
-    public Contact getContact() {
-        return this.contact;
+    public int getContactid() {
+        return this.contactid;
     }
     
-    public void setContact(Contact contact) {
-        this.contact = contact;
+    public void setContactid(int contactid) {
+        this.contactid = contactid;
     }
-    public Taal getTaal() {
+    public int getTaal() {
         return this.taal;
     }
     
-    public void setTaal(Taal taal) {
+    public void setTaal(int taalid) {
         this.taal = taal;
     }
     public String getNaam() {
@@ -125,17 +123,6 @@ public class Transportadres  implements java.io.Serializable {
     public void setVrijveld(String vrijveld) {
         this.vrijveld = vrijveld;
     }
-    public Set<Actie> getActies() {
-        return this.acties;
-    }
-    
-    public void setActies(Set<Actie> acties) {
-        this.acties = acties;
-    }
-
-
-
-
 }
 
 
