@@ -8,9 +8,9 @@
             <column name="opleggerid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="laadgegevens" class="be.pxl.publictms.pojo.Laadgegevens" fetch="select">
+        <property name="laadgegevens" type="int">
             <column name="laadid" />
-        </many-to-one>
+        </property>
         <property name="nummerplaat" type="string">
             <column name="nummerplaat" length="10" />
         </property>
@@ -44,17 +44,5 @@
         <property name="pvg" type="string">
             <column name="pvg" length="30" />
         </property>
-        <set name="voertuigs" inverse="true">
-            <key>
-                <column name="opleggerid" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Voertuig" />
-        </set>
-        <set name="opdrachts" inverse="true">
-            <key>
-                <column name="opleggerid" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Opdracht" />
-        </set>
     </class>
 </hibernate-mapping>

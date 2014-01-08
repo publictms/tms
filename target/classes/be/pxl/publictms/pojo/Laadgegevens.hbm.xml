@@ -35,11 +35,5 @@
         <property name="motornorm" type="string">
             <column name="motornorm" length="30" />
         </property>
-        <set name="opleggers" inverse="true">
-            <key>
-                <column name="laadid" />
-            </key>
-            <one-to-many class="be.pxl.publictms.pojo.Oplegger" />
-        </set>
     </class>
 </hibernate-mapping>
