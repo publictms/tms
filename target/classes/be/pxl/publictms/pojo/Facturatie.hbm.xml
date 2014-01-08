@@ -8,12 +8,12 @@
             <column name="facturatieid" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="adres" class="be.pxl.publictms.pojo.Adres" fetch="select">
-            <column name="adresid" not-null="true" />
-        </many-to-one>
-        <many-to-one name="klant" class="be.pxl.publictms.pojo.Klant" fetch="select">
-            <column name="klantid" not-null="true" />
-        </many-to-one>
+        <property name="adres" type="int">
+            <column name="adresid" />
+        </property>
+        <property name="klant" type="int">
+            <column name="klantid" />
+        </property>
         <property name="munt" type="string">
             <column name="munt" length="30" />
         </property>

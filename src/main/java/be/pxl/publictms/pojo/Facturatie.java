@@ -10,8 +10,8 @@ public class Facturatie  implements java.io.Serializable {
 
 
      private int facturatieid;
-     private Adres adres;
-     private Klant klant;
+     private int adres;
+     private int klant;
      private String munt;
      private String btwregime;
      private String btwnummer;
@@ -26,12 +26,12 @@ public class Facturatie  implements java.io.Serializable {
     }
 
 	
-    public Facturatie(int facturatieid, Adres adres, Klant klant) {
+    public Facturatie(int facturatieid, int adres, int klant) {
         this.facturatieid = facturatieid;
         this.adres = adres;
         this.klant = klant;
     }
-    public Facturatie(int facturatieid, Adres adres, Klant klant, String munt, String btwregime, String btwnummer, String ondernemingsnummer, String iban, String bic, String betalingscondities, String vrijveld, Double prijsgegeven) {
+    public Facturatie(int facturatieid, int adres, int klant, String munt, String btwregime, String btwnummer, String ondernemingsnummer, String iban, String bic, String betalingscondities, String vrijveld, Double prijsgegeven) {
        this.facturatieid = facturatieid;
        this.adres = adres;
        this.klant = klant;
@@ -53,18 +53,18 @@ public class Facturatie  implements java.io.Serializable {
     public void setFacturatieid(int facturatieid) {
         this.facturatieid = facturatieid;
     }
-    public Adres getAdres() {
+    public int getAdres() {
         return this.adres;
     }
     
-    public void setAdres(Adres adres) {
+    public void setAdres(int adres) {
         this.adres = adres;
     }
-    public Klant getKlant() {
+    public int getKlant() {
         return this.klant;
     }
     
-    public void setKlant(Klant klant) {
+    public void setKlant(int klant) {
         this.klant = klant;
     }
     public String getMunt() {

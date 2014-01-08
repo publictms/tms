@@ -6,7 +6,6 @@ package be.pxl.publictms;
 
 import be.pxl.publictms.pojo.Rijbewijsgegevens;
 import be.pxl.publictms.service.RijbewijsgegevensService;
-import be.pxl.publictms.service.TransportadresService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
