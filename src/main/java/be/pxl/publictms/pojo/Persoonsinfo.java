@@ -20,7 +20,7 @@ public class Persoonsinfo  implements java.io.Serializable {
      private String iban;
      private String bic;
      private String burgerstand;
-     private Integer aantalkinderen;
+     private int aantalkinderen;
 
     public Persoonsinfo() {
     }
@@ -37,7 +37,7 @@ public class Persoonsinfo  implements java.io.Serializable {
         this.iban = iban;
         this.bic = bic;
     }
-    public Persoonsinfo(int infoid, String rijksregisternr, String siskaart, String identiteitsnr, String persioennr, String geboorteplaats, Date geboortedatum, String iban, String bic, String burgerstand, Integer aantalkinderen) {
+    public Persoonsinfo(int infoid, String rijksregisternr, String siskaart, String identiteitsnr, String persioennr, String geboorteplaats, Date geboortedatum, String iban, String bic, String burgerstand, int aantalkinderen) {
        this.infoid = infoid;
        this.rijksregisternr = rijksregisternr;
        this.siskaart = siskaart;
@@ -121,11 +121,11 @@ public class Persoonsinfo  implements java.io.Serializable {
     public void setBurgerstand(String burgerstand) {
         this.burgerstand = burgerstand;
     }
-    public Integer getAantalkinderen() {
+    public int getAantalkinderen() {
         return this.aantalkinderen;
     }
     
-    public void setAantalkinderen(Integer aantalkinderen) {
+    public void setAantalkinderen(int aantalkinderen) {
         this.aantalkinderen = aantalkinderen;
     }
 
