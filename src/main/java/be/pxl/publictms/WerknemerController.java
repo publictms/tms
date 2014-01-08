@@ -31,19 +31,19 @@ public class WerknemerController {
         return werknemerService.getWerknemers();
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addWerknemer(Werknemer werknemer){
         if(!werknemerService.getWerknemers().contains(werknemer))
         werknemerService.addWerknemer(werknemer);
     }
     
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.PUT)
     public @ResponseBody void deleteWerknemer(@PathVariable("id") int id){
         if(werknemerService.getWerknemers().contains(werknemerService.getWerknemers().get(id)))
         werknemerService.deleteWerknemer(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateWerknemer(Werknemer werknemer){
         if(werknemerService.getWerknemers().contains(werknemer))
         werknemerService.updateWerknemer(werknemer);

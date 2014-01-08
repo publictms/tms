@@ -36,7 +36,7 @@ public class GebruikerController {
         return gebruikerService.getGebruikers();
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addUser(Gebruiker gebruiker){
         if(!gebruikerService.getGebruikers().contains(gebruiker))
         gebruikerService.addGebruiker(gebruiker);
@@ -48,7 +48,7 @@ public class GebruikerController {
         gebruikerService.deleteGebruiker(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateUser(Gebruiker gebruiker){
         if(gebruikerService.getGebruikers().contains(gebruiker))
         gebruikerService.updateGebruiker(gebruiker);

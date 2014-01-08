@@ -30,17 +30,17 @@ public class PersoonsinfoController {
         return persoonsinfoService.getPersoonsinfo(id);
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addPersoonsinfo(Persoonsinfo persoonsinfo){
         persoonsinfoService.addPersoonsinfo(persoonsinfo);
     }
     
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.PUT)
     public @ResponseBody void deletePersoonsinfo(@PathVariable("id") int id){
         persoonsinfoService.deletePersoonsinfo(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updatePersoonsinfo(Persoonsinfo persoonsinfo){
         persoonsinfoService.updatePersoonsinfo(persoonsinfo);
     }

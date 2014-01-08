@@ -36,7 +36,7 @@ public class OpleggerController {
         return opleggerService.getOpleggers();
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addOplegger(Oplegger oplegger){
         if(!opleggerService.getOpleggers().contains(oplegger))
         opleggerService.addOplegger(oplegger);
@@ -48,7 +48,7 @@ public class OpleggerController {
         opleggerService.deleteOpleggers(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateOplegger(Oplegger oplegger){
         if(opleggerService.getOpleggers().contains(oplegger))
         opleggerService.updateOplegger(oplegger);

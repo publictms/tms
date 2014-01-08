@@ -36,7 +36,7 @@ public class KlantController {
         return klantService.getKlanten();
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addKlant(Klant klant){
         if(!klantService.getKlanten().contains(klant))
         klantService.addKlant(klant);
@@ -48,7 +48,7 @@ public class KlantController {
         klantService.deleteKlant(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateKlant(Klant klant){
         if(klantService.getKlanten().contains(klant))
         klantService.updateKlant(klant);

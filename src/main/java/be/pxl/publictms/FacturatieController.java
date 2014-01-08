@@ -25,12 +25,12 @@ public class FacturatieController {
     @Autowired
     private FacturatieService facturatieService;
     
-    @RequestMapping(value = "add",method = RequestMethod.POST)
+    @RequestMapping(value = "add",method = RequestMethod.PUT)
     public @ResponseBody void add(Facturatie factuur){
         facturatieService.addFacturatie(factuur);
     }
     
-    @RequestMapping(value = "update",method = RequestMethod.POST)
+    @RequestMapping(value = "update",method = RequestMethod.PUT)
     public @ResponseBody void update(Facturatie factuur){
         facturatieService.updateFactuur(factuur);
     }

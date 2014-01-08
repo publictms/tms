@@ -36,17 +36,17 @@ public class VoertuigController {
         return voertuigService.getVoertuig(id);
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addVoertuig(Voertuig voertuig){
         voertuigService.addVoertuig(voertuig);
     }
     
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.PUT)
     public @ResponseBody void deleteVoertuig(@PathVariable("id") int id){
         voertuigService.deleteVoertuig(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateVoertuig(Voertuig voertuig){
         voertuigService.updateVoertuig(voertuig);
     }

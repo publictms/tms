@@ -30,17 +30,17 @@ public class RijbewijsgegevensController {
         return rijbewijsgegevensService.getRijbewijsgegevens(id);
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addRijbewijsgegevens(Rijbewijsgegevens rijbewijsgegevens){
         rijbewijsgegevensService.addRijbewijsgegevens(rijbewijsgegevens);
     }
     
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.PUT)
     public @ResponseBody void deleteRijbewijsgegevens(@PathVariable("id") int id){
         rijbewijsgegevensService.deleteRijbewijsgegevens(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateRijbewijsgegevens(Rijbewijsgegevens rijbewijsgegevens){
         rijbewijsgegevensService.updateRijbewijsgegevens(rijbewijsgegevens);
     }

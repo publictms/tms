@@ -30,17 +30,17 @@ public class TaalController {
         return taalService.getTaal(id);
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addTaal(Taal taal){
         taalService.addTaal(taal);
     }
     
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.PUT)
     public @ResponseBody void deleteTaal(@PathVariable("id") int id){
         taalService.deleteTaal(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateTaal(Taal taal){
         taalService.updateTaal(taal);
     }

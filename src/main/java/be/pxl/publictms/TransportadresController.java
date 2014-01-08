@@ -30,17 +30,17 @@ public class TransportadresController {
         return transportadresService.getTransportadres(id);
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addTransportadres(Transportadres transportadres){
         transportadresService.addTransportadres(transportadres);
     }
     
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.PUT)
     public @ResponseBody void deleteTransportadres(@PathVariable("id") int id){
         transportadresService.deleteTransportadres(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateTransportadres(Transportadres transportadres){
         transportadresService.updateTransportadres(transportadres);
     }

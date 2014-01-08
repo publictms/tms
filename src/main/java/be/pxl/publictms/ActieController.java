@@ -26,7 +26,7 @@ public class ActieController {
     @Autowired
     private ActieService actieService;
     
-    @RequestMapping(value = "add",method = RequestMethod.POST)
+    @RequestMapping(value = "add",method = RequestMethod.PUT)
     public @ResponseBody void add(Actie actie){
         actieService.addActie(actie);
     }
@@ -41,7 +41,7 @@ public class ActieController {
         actieService.deleteActie(id);
     }
     
-    @RequestMapping(value = "update",method = RequestMethod.POST)
+    @RequestMapping(value = "update",method = RequestMethod.PUT)
     public @ResponseBody void update(Actie actie){
         actieService.updateActie(actie);
     }

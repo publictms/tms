@@ -25,7 +25,7 @@ public class AdresController {
     @Autowired
     private AdresService adresService;
     
-    @RequestMapping(value = "add",method = RequestMethod.POST)
+    @RequestMapping(value = "add",method = RequestMethod.PUT)
     public @ResponseBody void add(Adres adres){
         adresService.addAdres(adres);
     }
@@ -40,7 +40,7 @@ public class AdresController {
         adresService.deleteAdres(id);
     }
     
-    @RequestMapping(value = "update",method = RequestMethod.POST)
+    @RequestMapping(value = "update",method = RequestMethod.PUT)
     public @ResponseBody void update(Adres adres){
         adresService.updateAdres(adres);
     }

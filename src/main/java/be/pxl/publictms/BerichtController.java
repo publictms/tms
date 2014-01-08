@@ -26,7 +26,7 @@ public class BerichtController {
     @Autowired
     private BerichtService berichtService;
     
-    @RequestMapping(value = "send",method = RequestMethod.POST)
+    @RequestMapping(value = "send",method = RequestMethod.PUT)
     public @ResponseBody void send(Bericht bericht){
         berichtService.send(bericht);
     }

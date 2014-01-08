@@ -31,17 +31,17 @@ public class LaadGegevensController {
         return laadGegevensService.getLaadgegevens(id);
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addLaadgegevens(Laadgegevens laadgegevens){
         laadGegevensService.addLaadgegevens(laadgegevens);
     }
     
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.PUT)
     public @ResponseBody void deleteLaadGegevens(@PathVariable("id") int id){
         laadGegevensService.deleteLaadgegeven(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateLaadgegevens(Laadgegevens laadgegevens){
         laadGegevensService.updateLaadgegeven(laadgegevens);
     }

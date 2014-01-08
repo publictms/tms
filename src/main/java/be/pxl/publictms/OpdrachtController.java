@@ -31,17 +31,17 @@ public class OpdrachtController {
         return opdrachtService.getOpdracht();
     }
     
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.PUT)
     public @ResponseBody void addOpdracht(Opdracht opdracht){
         opdrachtService.addOpdracht(opdracht);
     }
     
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.PUT)
     public @ResponseBody void deleteOpdracht(@PathVariable("id") int id){
         opdrachtService.deleteOpdracht(id);
     }
     
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "update", method = RequestMethod.PUT)
     public @ResponseBody void updateOpdracht(Opdracht opdracht){
         opdrachtService.updateOpdracht(opdracht);
     }

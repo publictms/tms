@@ -24,12 +24,12 @@ public class ContactController {
     @Autowired
     private ContactService contactService;
     
-    @RequestMapping(value = "add",method = RequestMethod.POST)
+    @RequestMapping(value = "add",method = RequestMethod.PUT)
     public @ResponseBody void add(Contact contact){
         contactService.addContact(contact);
     }
     
-    @RequestMapping(value = "update",method = RequestMethod.POST)
+    @RequestMapping(value = "update",method = RequestMethod.PUT)
     public @ResponseBody void update(Contact contact){
         contactService.updateContact(contact);
     }

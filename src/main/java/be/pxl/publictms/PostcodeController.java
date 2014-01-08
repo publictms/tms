@@ -36,7 +36,7 @@ public class PostcodeController {
         return postcodeService.getGemeente();
     }
     
-    @RequestMapping(value = "add",method = RequestMethod.POST)
+    @RequestMapping(value = "add",method = RequestMethod.PUT)
     public @ResponseBody void addGemeente(Postcode postcode){
         postcodeService.addGemeente(postcode);
     }
