@@ -26,22 +26,22 @@ public class ActieController {
     @Autowired
     private ActieService actieService;
     
-    @RequestMapping(value = "add",method = RequestMethod.PUT)
+    @RequestMapping(value = "/",method = RequestMethod.PUT)
     public @ResponseBody void add(Actie actie){
         actieService.addActie(actie);
     }
     
-    @RequestMapping(value = "get/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public @ResponseBody List<Actie> get(@PathVariable("id") int id){
         return actieService.getActiesVanOpdracht(id);
     }
     
-    @RequestMapping(value = "delete/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public @ResponseBody void delete(@PathVariable("id") int id){
         actieService.deleteActie(id);
     }
     
-    @RequestMapping(value = "update",method = RequestMethod.PUT)
+    @RequestMapping(value = "/",method = RequestMethod.PUT)
     public @ResponseBody void update(Actie actie){
         actieService.updateActie(actie);
     }
